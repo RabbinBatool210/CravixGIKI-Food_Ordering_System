@@ -1,2 +1,2 @@
 print("Bismillah")
-print("from VS code")
+print("from VS code terminal")
