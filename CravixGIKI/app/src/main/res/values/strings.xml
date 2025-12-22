@@ -3,4 +3,5 @@
     <string name="next">Next</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_web_client_id">592910655786-lcujqglvoqk5klir848spon5kr9pet34.apps.googleusercontent.com</string>
 </resources>

@@ -8,10 +8,12 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.example.CravixGIKI.databinding.ActivityLoginBinding
 import com.example.CravixGIKI.Model.UserModel
+import com.example.CravixGIKI.R.string.default_web_client_id
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions.DEFAULT_SIGN_IN
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
@@ -36,8 +38,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val googleSignInOptions = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build()
+        val googleSignInOptions = GoogleSignInOptions.Builder(DEFAULT_SIGN_IN)
+            .requestIdToken(getString(default_web_client_id)).requestEmail().build()
         // Initialization of Firebase Auth
         auth = Firebase.auth
         // Initialization of Firebase Database

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "592910655786",
+    "firebase_url": "https://cravix-giki-default-rtdb.firebaseio.com",
+    "project_id": "cravix-giki",
+    "storage_bucket": "cravix-giki.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592910655786:android:443ad3fd6279d1a30cbe53",
+        "android_client_info": {
+          "package_name": "com.example.CravixGIKI"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592910655786-s03o0am2nelhnk16q8cb0r7s6l1513dq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.CravixGIKI",
+            "certificate_hash": "de48124f6493827af7b39ae680f882e992aceb80"
+          }
+        },
+        {
+          "client_id": "592910655786-lcujqglvoqk5klir848spon5kr9pet34.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhuvH3HMOVBAplL9Gyzteg8xkTJQLwfBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592910655786-lcujqglvoqk5klir848spon5kr9pet34.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
