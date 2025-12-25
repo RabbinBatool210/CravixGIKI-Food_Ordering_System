@@ -23,16 +23,26 @@ class RecentOrderItems : AppCompatActivity() {
         binding.backButton.setOnClickListener {
             finish()
         }
-        val recentOrderItems =
-            intent.getSerializableExtra("RecentBuyOrderItem") as ArrayList<OrderDetails>
+        val recentOrderItems = if (android.os.Build.VERSION.SDK_INT >= 33) {
+            intent.getSerializableExtra(
+                "RecentBuyOrderItem",
+                ArrayList::class.java
+            ) as? ArrayList<OrderDetails>
+        } else {
+            @Suppress("DEPRECATION")
+            intent.getSerializableExtra("RecentBuyOrderItem") as? ArrayList<OrderDetails>
+        }
+
+//        val recentOrderItems =
+//            intent.getParcelableArrayListExtra<OrderDetails>("RecentBuyOrderItem")
         recentOrderItems?.let { orderDetails ->
             if (orderDetails.isNotEmpty()) {
                 val recentOrderItem = orderDetails[0]
 
-                allFoodNames = recentOrderItem.foodNames as ArrayList<String>
-                allFoodImages = recentOrderItem.foodImages as ArrayList<String>
-                allFoodPrices = recentOrderItem.foodPrices as ArrayList<String>
-                allFoodQuantities = recentOrderItem.foodQuantities as ArrayList<Int>
+                allFoodNames = recentOrderItem.foodNames ?: arrayListOf()
+                allFoodImages = recentOrderItem.foodImages ?: arrayListOf()
+                allFoodPrices = recentOrderItem.foodPrices ?: arrayListOf()
+                allFoodQuantities = recentOrderItem.foodQuantities ?: arrayListOf()
 
             }
 
